@@ -1,12 +1,14 @@
 function openNav() {
-  document.getElementById("mySidenav").style.width = "250px";
-  document.getElementById("main").style.marginLeft = "250px";
+  document.getElementById("mySidenav").style.width = "350px";
+  document.getElementById("main").style.marginLeft = "400px";
+  document.getElementById("topbar").style.marginLeft = "400px";
 }
 
 /* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
 function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
   document.getElementById("main").style.marginLeft = "0";
+  document.getElementById("topbar").style.marginLeft = "0";
 }
 
 
@@ -39,3 +41,18 @@ function includeHTML() {
 }
 
 includeHTML();
+
+
+const giver = `
+  <div class="giver">
+     <hr class = "giver-hr">
+     <select class ="giver-subject">hellooo</select>
+     <select class ="giver-status"></select>
+     <label class = giver-isClient>
+       <input type = "radio">
+       <span>lorem ipsum</span>
+     </label>
+  </div>
+`;
+
+document.getElementById("main").insertAdjacentHTML("beforeend", giver);

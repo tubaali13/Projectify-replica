@@ -5,6 +5,10 @@
 	font-family: "Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
 }
 
+body{
+	background-color: #f5f5eeee;
+}
+
 strong {
 	font-weight: bolder;
 }
@@ -1148,51 +1152,123 @@ div.tab-buttons button.tab-selected {
 	}
 }
 
-.sidenav {
-  height: 100%; /* 100% Full-height */
-  width: 0; /* 0 width - change this with JavaScript */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Stay on top */
-  top: 0; /* Stay at the top */
+
+@media (min-width: 960px) {
+  .nc-sidebar {
+    animation: sidebar-appear 0.14s;
+    padding-top: 10px;
+  }
+}
+.nc-sidebar {
+  background: #ffffff;
+  border-right: 1px solid #dbdbc7;
+  overflow-y: auto;
+  overflow-x: hidden;
+  z-index: 500;
+  height: 100%; 
+  width: 0; 
+  position: fixed; 
+  top: 0; 
   left: 0;
-  background-color: #111; /* Black*/
-  overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 60px; /* Place content 60px from the top */
-  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  overflow-x: hidden; 
+
 }
 
-/* The navigation menu links */
-.sidenav a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #818181;
+.nc-sidebar .segment {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+@media (min-width: 960px) {
+  .mobile-only {
+    display: none;
+  }
+}
+.nc-sidebar h1.site-title {
+  margin: 0;
+}
+.nc-sidebar .site-subtitle {
+  color: #353748;
+}
+.nc-sidebar .section .label {
+  padding: 2px 0;
+  color: #353748;
+  fill: #353748;
+  font-weight: bold;
+  line-height: 1.6em;
   display: block;
-  transition: 0.3s;
+  width: 100%;
+  text-align: left;
+  padding: 8px 15px;
+  border-radius: 0;
+}
+.nc-sidebar .section:not(.open) .label:hover {
+  background: rgba(0, 0, 0, 0.06);
+}
+.nc-sidebar .section .label .caret {
+  display: inline-block;
+  width: 15px;
+  float: right;
+}
+.nc-sidebar .content {
+  padding: 6px 15px;
+  font-size: 1em;
+}
+.closebtn {
+	text-decoration: none;
+	float: right;
+	color: #333;
+}
+@media (min-width: 960px) {
+  .nc-sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+  }
+}
+@media (max-width: 960px) {
+  .nc-sidebar {
+    overflow: auto;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    bottom: 48px;
+    z-index: 3000;
+    animation: sidebar-slide ease-in 0.2s;
+    animation-fill-mode: forwards;
+  }
+}
+input {
+  transition: border 0.14s ease-in-out;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 0.5em;
+  border-radius: 4px;
 }
 
-/* When you mouse over the navigation links, change their color */
-.sidenav a:hover {
-  color: #f1f1f1;
+.site-title {
+  font-size: 28px !important;
+  line-height: 34px !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.5px !important;
 }
-
-/* Position and style the close button (top right corner) */
-.sidenav .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
+h1 {
+  font-weight: 600;
 }
-
-/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
-#main {
-  transition: margin-left .5s;
-  padding: 20px;
+/*! CSS Used keyframes */
+@keyframes sidebar-appear {
+  0% {
+    left: -350px;
+  }
+  100% {
+    left: 0;
+  }
 }
-
-/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
+@keyframes sidebar-slide {
+  0% {
+    left: -100vw;
+  }
+  100% {
+    left: 0;
+  }
 }
