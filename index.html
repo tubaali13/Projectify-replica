@@ -7,7 +7,7 @@
 	<title>Shunya.ek</title>
 </head>
 <body>
-	<div class="container">
+	<div id="main" class="container">
 		<section class="about">
 			<div class="frame">
 				<div class="titlebar">
@@ -426,10 +426,9 @@
       </p>
       </div>
       </div>
-      <div data-title="Contributing" class="frame">
+      <div data-title="Contributing" data-tags="" class="frame view-frame exists ">
       <div class="title">
       <div class="titlebar">
-      	 <h2 class="title">Contributing</h2>
       <span class="controls">
        <span class=" reveal">
         <button class="btn-invisible btn-%24%3A%2Fcore%2Fui%2FButtons%2Fmore-actions" title="More actions" aria-label="more">
@@ -439,7 +438,7 @@
       </button>
       </span>
       <span class=" reveal">
-      <button class="btn-invisible" title="Edit this tiddler" aria-label="edit">
+      <button class="btn-invisible btn-%24%3A%2Fcore%2Fui%2FButtons%2Fedit" title="Edit this tiddler" aria-label="edit">
        <svg width="22pt" height="22pt" class="image-edit-button image-button" viewBox="0 0 128 128">
         <g fill-rule="evenodd">
          <path d="M95.627 10.059l-5.656 5.657 11.313 11.313 5.657-5.656-11.314-11.314zm5.657-5.657l1.966-1.966c3.123-3.122 8.194-3.129 11.319-.005 3.117 3.118 3.122 8.192-.005 11.32l-1.966 1.965-11.314-11.314zm-16.97 16.97l-60.25 60.25a8.12 8.12 0 00-.322.342c-.1.087-.198.179-.295.275-5.735 5.735-10.702 22.016-10.702 22.016s16.405-5.09 22.016-10.702c.095-.096.186-.193.272-.292a8.12 8.12 0 00.345-.325l60.25-60.25-11.314-11.313zM35.171 124.19c6.788-.577 13.898-2.272 23.689-5.348 1.825-.573 3.57-1.136 6.336-2.04 16-5.226 21.877-6.807 28.745-7.146 8.358-.413 13.854 2.13 17.58 8.699a4 4 0 006.959-3.946c-5.334-9.406-13.745-13.296-24.933-12.744-7.875.39-14.057 2.052-30.835 7.533-2.739.894-4.46 1.45-6.25 2.012-19.46 6.112-30.77 7.072-39.597 1.747a4 4 0 10-4.132 6.85c6.333 3.82 13.754 5.12 22.438 4.383z"></path>
@@ -456,25 +455,25 @@
       </span>
       </span>
       </div>
-      <div>
+      <div class=" reveal">
       <div class="subtitle"><a class="link" href="#"></a>9th January 2021 at 1:15am</div>
       </div>
-      <div>
+      <div class=" reveal">
       <div class="tags-wrapper"></div>
       </div>
-      <div class="b">
+      <div class="body reveal">
       <p>The project is hosted on GitHub at <a href="https://github.com/thaddeusjiang/projectify" class="tiddlylink-external" target="_blank" rel="noopener noreferrer">github.com/thaddeusjiang/projectify</a>.</p>
       <p>Bug reports &amp; pull requests are most welcome!</p>
 </span></p>
-<p><span hidden="true"></span></p>
 <p>
-  <span>
+  <span class=" reveal">
    <div class="nc-topbar-wrapper">
      <div class="nc-bar nc-topbar adjust-top-of-scroll">
        <div class="left">
+       	<div id="mySidenav" class="sidenav" w3-include-html="sidenavbar.html"></div>
          <span>
            <button class="btn-invisible sidebar-toggle" title="Toggle menu">
-             <svg class="bars" height="21pt" viewBox="0 0 42 42" enable-background="new 0 0 32 22.5" version="1.1">
+             <svg onclick="openNav()" class="bars" height="21pt" viewBox="0 0 42 42" enable-background="new 0 0 32 22.5" version="1.1">
                <g class="svg-menu-toggle">
                  <rect class="bar" x="8" y="28" width="26" height="4"></rect>
                  <rect class="bar" x="8" y="19" width="26" height="4"></rect>
@@ -487,7 +486,7 @@
          <button class="btn-invisible page-controls" title="Advanced search" aria-label="advanced search">
            <svg width="22pt" height="22pt" class="image-advanced-search-button image-button" viewBox="0 0 128 128"><g fill-rule="evenodd"><path d="M74.565 87.985A47.776 47.776 0 0148 96C21.49 96 0 74.51 0 48S21.49 0 48 0s48 21.49 48 48c0 9.854-2.97 19.015-8.062 26.636l34.347 34.347a9.443 9.443 0 010 13.36 9.446 9.446 0 01-13.36 0l-34.36-34.358zM48 80c17.673 0 32-14.327 32-32 0-17.673-14.327-32-32-32-17.673 0-32 14.327-32 32 0 17.673 14.327 32 32 32z"></path><circle cx="48" cy="48" r="8"></circle><circle cx="28" cy="48" r="8"></circle><circle cx="68" cy="48" r="8"></circle></g></svg>
          </button>
-         <div class="block-dropdown-wrap" hidden="true"></div>
+         <div class="block-dropdown-wrapper reveal" hidden="true"></div>
        </div>
        <div class="right">
          <div class="page-controls"><button class="btn-invisible btn-%24%3A%2Fcore%2Fui%2FButtons%2Fhome" title="Open the default tiddlers" aria-label="home">
@@ -495,7 +494,7 @@
          </button>
          <button class="btn-invisible btn-new-tiddler" title="Create a new tiddler" aria-label="new tiddler"><svg width="22pt" height="22pt" class="image-new-button image-button" viewBox="0 0 128 128"><path fill-rule="evenodd" d="M56 72H8.007C3.591 72 0 68.418 0 64c0-4.41 3.585-8 8.007-8H56V8.007C56 3.591 59.582 0 64 0c4.41 0 8 3.585 8 8.007V56h47.993c4.416 0 8.007 3.582 8.007 8 0 4.41-3.585 8-8.007 8H72v47.993c0 4.416-3.582 8.007-8 8.007-4.41 0-8-3.585-8-8.007V72z"></path></svg>
          </button>
-         <button class="btn-invisible  " title="Open control panel" aria-label="control panel">
+         <button class="btn-invisible btn-%24%3A%2Fcore%2Fui%2FButtons%2Fcontrol-panel " title="Open control panel" aria-label="control panel">
            <svg width="22pt" height="22pt" class="image-options-button image-button" viewBox="0 0 128 128"><path fill-rule="evenodd" d="M110.488 76a47.712 47.712 0 01-5.134 12.384l6.724 6.724c3.123 3.123 3.132 8.192.011 11.313l-5.668 5.668c-3.12 3.12-8.186 3.117-11.313-.01l-6.724-6.725c-3.82 2.258-7.98 4-12.384 5.134v9.505c0 4.417-3.578 8.007-7.992 8.007h-8.016C55.58 128 52 124.415 52 119.993v-9.505a47.712 47.712 0 01-12.384-5.134l-6.724 6.725c-3.123 3.122-8.192 3.131-11.313.01l-5.668-5.668c-3.12-3.12-3.116-8.186.01-11.313l6.725-6.724c-2.257-3.82-4-7.98-5.134-12.384H8.007C3.591 76 0 72.422 0 68.01v-8.017C0 55.58 3.585 52 8.007 52h9.505a47.712 47.712 0 015.134-12.383l-6.724-6.725c-3.123-3.122-3.132-8.191-.011-11.312l5.668-5.669c3.12-3.12 8.186-3.116 11.313.01l6.724 6.725c3.82-2.257 7.98-4 12.384-5.134V8.007C52 3.591 55.578 0 59.992 0h8.016C72.42 0 76 3.585 76 8.007v9.505a47.712 47.712 0 0112.384 5.134l6.724-6.724c3.123-3.123 8.192-3.132 11.313-.01l5.668 5.668c3.12 3.12 3.116 8.186-.01 11.312l-6.725 6.725c2.257 3.82 4 7.979 5.134 12.383h9.505c4.416 0 8.007 3.578 8.007 7.992v8.017c0 4.411-3.585 7.991-8.007 7.991h-9.505zM64 96c17.673 0 32-14.327 32-32 0-17.673-14.327-32-32-32-17.673 0-32 14.327-32 32 0 17.673 14.327 32 32 32z"></path></svg>
          </button><button class="btn-invisible btn-%24%3A%2Fcore%2Fui%2FButtons%2Fsave-wiki" title="Save changes" aria-label="save changes">
            <span class="dirty-indicator">
@@ -510,23 +509,25 @@
              <div class="py-pill"></div>
            </span>
          </button>
-         <span hidden="true"></span>
+         <span class=" reveal" hidden="true"></span>
          <span class="desktop-only">
            <button class="btn-invisible">
              <svg width="20px" height="20px" viewBox="0 0 16 16" class="bi bi-circle-half" fill="currentColor">
                <path fill-rule="evenodd" d="M8 15V1a7 7 0 1 1 0 14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"></path>
                &lt;/svg
              </svg>
-            
+             <span class="drop-down tc-reveal" hidden="true"></span>
            </button>
          </span>
        </div>
      </div>
    </div>
  </div>
-      </div> 
+      </div>
+      
       </section>   			
 		</section>
-	</div>	
+	</div>
+	<script type="text/javascript" src="script.js"></script>	
 </body>
 </html>
