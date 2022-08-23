@@ -4,7 +4,7 @@ const newnote = `<div class="newnote-box frame" data-title="Draft of 'New Tiddle
     <span class=" keyboard">
 
       <div class="title edit-title">
-        Draft of 'New Tiddler 2'
+        Draft of 'New Task' ( For now you can only use title and description.)
         <span class="controls titlebar"><span class=" reveal"><button class="btn-invisible btn-%24%3A%2Fcore%2Fui%2FEditTemplate%2Fcontrols" title="Delete this tiddler" aria-label="delete"><svg width="22pt" height="22pt" class="image-delete-button image-button" viewBox="0 0 128 128">
                 <g fill-rule="evenodd" transform="translate(12)">
                   <rect width="105" height="16" y="11" rx="8"></rect>
@@ -15,11 +15,11 @@ const newnote = `<div class="newnote-box frame" data-title="Draft of 'New Tiddle
                   <rect width="16" height="112" x="56" y="16" rx="8"></rect>
                   <rect width="16" height="112" x="32" y="16" rx="8"></rect>
                 </g>
-              </svg></button></span><span class=" reveal"><button class="btn-invisible btn-%24%3A%2Fcore%2Fui%2FEditTemplate%2Fcontrols" title="Discard changes to this tiddler" aria-label="cancel"><svg onclick="closingNewNote(event)" width="22pt" height="22pt" class=" newnote-close-btn image-cancel-button image-button" viewBox="0 0 128 128">
+              </svg></button></span><span class=" reveal"><button class="btn-invisible btn-%24%3A%2Fcore%2Fui%2FEditTemplate%2Fcontrols" title="Discard changes to this tiddler" aria-label="cancel"><svg style="fill:black;" onclick="closingNewNote(event)" width="22pt" height="22pt" class=" newnote-close-btn image-cancel-button image-button" viewBox="0 0 128 128">
                 <path fill-rule="evenodd" d="M64 76.314l-16.97 16.97a7.999 7.999 0 01-11.314 0c-3.118-3.118-3.124-8.19 0-11.313L52.686 65l-16.97-16.97a7.999 7.999 0 010-11.314c3.118-3.118 8.19-3.124 11.313 0L64 53.686l16.97-16.97a7.999 7.999 0 0111.314 0c3.118 3.118 3.124 8.19 0 11.313L75.314 65l16.97 16.97a7.999 7.999 0 010 11.314c-3.118 3.118-8.19 3.124-11.313 0L64 76.314zM64 129c35.346 0 64-28.654 64-64 0-35.346-28.654-64-64-64C28.654 1 0 29.654 0 65c0 35.346 28.654 64 64 64zm0-16c26.51 0 48-21.49 48-48S90.51 17 64 17 16 38.49 16 65s21.49 48 48 48z"></path>
               </svg></button></span><span class=" reveal"><button class="btn-invisible btn-%24%3A%2Fcore%2Fui%2FEditTemplate%2Fcontrols" title="Confirm changes to this tiddler" aria-label="ok">
 
-              <svg onclick="addingTodo()" width="22pt" height="22pt" class="newnote-done-btn image-done-button image-button" viewBox="0 0 128 128">
+              <svg style="fill:black;" onclick="addingTodo()" width="22pt" height="22pt" class="newnote-done-btn image-done-button image-button" viewBox="0 0 128 128">
                 <path fill-rule="evenodd" d="M42.26 111.032c-2.051.001-4.103-.78-5.668-2.345L2.662 74.758a8 8 0 01-.005-11.32c3.118-3.117 8.192-3.12 11.32.007l28.278 28.278 72.124-72.124a8.002 8.002 0 0111.314-.001c3.118 3.118 3.124 8.19 0 11.315l-77.78 77.78a7.978 7.978 0 01-5.658 2.343z"></path>
               </svg></button>
           </span></span>
@@ -194,21 +194,12 @@ const todo = `<div data-tiddler-title="Watering plants" data-tags="" class="todo
               </g>
             </svg></button></span><span class=" reveal" ></span><span class=" reveal" ></span><span class=" reveal" ></span><span class=" reveal" ></span><span class=" reveal" ></span><span class=" reveal">
 
-        </span><span class=" reveal"><button class="btn-invisible"><svg onclick="closingTodo(event)" width="22pt" height="22pt" class="todo-closebtn image-close-button image-button" viewBox="0 0 128 128">
+        </span><span class=" reveal"><button class="btn-invisible"><svg style="fill:black;" onclick="closingTodo(event)" width="22pt" height="22pt" class="todo-closebtn image-close-button image-button" viewBox="0 0 128 128">
               <path fill-rule="evenodd" d="M65.086 75.41l-50.113 50.113c-3.121 3.121-8.192 3.126-11.316.002-3.118-3.118-3.123-8.19.002-11.316l50.114-50.114L3.659 13.982C.538 10.86.533 5.79 3.657 2.666c3.118-3.118 8.19-3.123 11.316.002l50.113 50.114L115.2 2.668c3.121-3.121 8.192-3.126 11.316-.002 3.118 3.118 3.123 8.19-.002 11.316L76.4 64.095l50.114 50.114c3.121 3.121 3.126 8.192.002 11.316-3.118 3.118-8.19 3.123-11.316-.002L65.086 75.409z"></path>
             </svg></button></span><span class=" reveal" ></span><span class=" reveal" ></span><span class=" reveal" ></span></span><span>
         <h2 id="todo-title" class="title">Watering plants</h2>
       </span></div>
-    <div class="info popup-handle reveal" ></div>
   </div>
-  <div class=" reveal" ></div>
-  <div class=" reveal">
-    <div class="subtitle"><a class="link link-missing" href="#"></a>22nd August 2022 at 11:47pm</div>
-  </div>
-  <div class=" reveal">
-    <div class="tags-wrapper"></div>
-  </div>
-
   <div class="body reveal">
     <p id="todo-description"></p>
   </div>
@@ -266,9 +257,6 @@ function closingNewNote(event) {
 
 function filterSearch() {
   var input = document.getElementById('search-input');
-  if( input.value ==  null)
-    console.log("No task found!");
-  else {
     var filter = input.value.toUpperCase();
   for (i = 0; i < yourTodos.length; i++) {
       txtValue = yourTodos[i].title || yourTodos[i].description;
@@ -276,9 +264,12 @@ function filterSearch() {
         document.getElementById("todo").insertAdjacentHTML('afterend',todo);
         document.getElementById("todo-title").innerText = yourTodos[i].title ;
         document.getElementById("todo-description").innerText = yourTodos[i].description;
+      }
+      else {
+        console.log("No task found");
       } 
   }
-  }
+  
   
 } 
 
