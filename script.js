@@ -26,7 +26,7 @@ const newnote = `<div class="newnote-box frame" data-title="Draft of 'New Tiddle
         <div style="clear: both;"></div>
       </div>
 
-      <input id="newnote-titlebar" type="text" class="titlebar edit-texteditor" tabindex="1
+      <input id="newnote-titlebar" type="text" class="titlebar edit-texteditor" placeholder="Enter the title..." tabindex="1
 ">
 
       <div class=" reveal" hidden="true"></div>
@@ -135,7 +135,7 @@ const newnote = `<div class="newnote-box frame" data-title="Draft of 'New Tiddle
                   <path d="M64.053 85.456a7.889 7.889 0 01-5.6-2.316L2.473 27.16a7.92 7.92 0 010-11.196c3.086-3.085 8.105-3.092 11.196 0L64.05 66.344l50.382-50.382a7.92 7.92 0 0111.195 0c3.085 3.086 3.092 8.105 0 11.196l-55.98 55.98a7.892 7.892 0 01-5.595 2.317z"></path>
                   <path d="M64.053 124.069a7.889 7.889 0 01-5.6-2.316l-55.98-55.98a7.92 7.92 0 010-11.196c3.086-3.085 8.105-3.092 11.196 0l50.382 50.382 50.382-50.382a7.92 7.92 0 0111.195 0c3.085 3.086 3.092 8.104 0 11.196l-55.98 55.98a7.892 7.892 0 01-5.595 2.316z"></path>
                 </g>
-              </svg></button><span class=" reveal" hidden="true"></span></span></div><textarea id="newnote-description" class="edit-texteditor edit-texteditor-body"></textarea>
+              </svg></button><span class=" reveal" hidden="true"></span></span></div><textarea id="newnote-description" class="edit-texteditor edit-texteditor-body" placeholder="Enter description"></textarea>
 
 
       <div class="edit-type-selector-wrapper"><em class="edit big-gap-right">Type:</em>
