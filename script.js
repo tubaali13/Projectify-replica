@@ -265,9 +265,11 @@ function closingNewNote(event) {
 
 
 function filterSearch() {
-  console.log("helloo");
   var input = document.getElementById('search-input');
-  var filter = input.value.toUpperCase();
+  if( input.value ==  null)
+    console.log("No task found!");
+  else {
+    var filter = input.value.toUpperCase();
   for (i = 0; i < yourTodos.length; i++) {
       txtValue = yourTodos[i].title || yourTodos[i].description;
       if (txtValue.toUpperCase().indexOf(filter) > -1) {
@@ -276,6 +278,8 @@ function filterSearch() {
         document.getElementById("todo-description").innerText = yourTodos[i].description;
       } 
   }
+  }
+  
 } 
 
 
