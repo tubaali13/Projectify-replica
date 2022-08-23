@@ -29,6 +29,10 @@ button {
 	-webkit-appearance: button;
 }
 
+* {
+	font-weight: normal;
+}
+
 ::-moz-focus-inner {
 	border-style: none;
 	padding: 0;
@@ -327,13 +331,6 @@ button svg.image-button {
 	}
 }
 
-.titlebar {
-	font-weight: 300;
-	font-size: 2.35em;
-	line-height: 1.35em;
-	color: #333;
-	margin: 0;
-}
 
 .titlebar h2 {
 	font-size: 1em;
@@ -613,9 +610,7 @@ input.input:focus {
 	border-color: #7f4bca;
 }
 
-.todo {
-	display: block;
-}
+
 
 .todo input[type="checkbox"] {
 	display: none;
@@ -1640,12 +1635,7 @@ button.btn-invisible {
   outline: 0;
   border-color: #7f4bca;
 }
-.titlebar {
-  font-size: 28px !important;
-  line-height: 34px !important;
-  font-weight: 600 !important;
-  letter-spacing: -0.5px !important;
-}
+
 
 .edit-texteditor-body {
 	border: none; 
